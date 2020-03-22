@@ -39,9 +39,7 @@ NYU has an attendance tracking system for various events happening around all ca
 
 When a user logs in to the system, the homepage shows a default selected organization, all groups within that organization and metadata for each group. How would you design the REST endpoints for such a page? Each entity mentioned above resides in its own table in a database. Below is an example image for the homepage(for illustration purposes only):
 
-
-![image](https://drive.google.com/uc?export=view&id=1OKeWJYPDEORp3EFtMSeozRKaKmCTjiN3)
-
+![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/nyuscreen.png)
 
 Part 2: Implementation
 
@@ -65,7 +63,7 @@ You can use any Http framework of your choice.
 
 # Database Entity Relationship Diagram With New Tables
 
-![image](https://drive.google.com/uc?export=view&id=1W0GdfvNuqeHbpMB7k8nYhuzOXCAaUykr)
+![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/erd.png)
 
 # Creating and priming the Database
 
@@ -240,7 +238,7 @@ Wasn’t specified in the requirement for this coding challenge, but I would nor
 Service should have basic error handling.
 
 # Highlevel Data Flow and Component Diagram
-![image](https://drive.google.com/uc?export=view&id=1_BXCm7ywodCemQENdVh0sYPzrFeFoaee)
+![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/dataflow.png)
 
 
 # API Service Code
@@ -406,10 +404,11 @@ navigate to http://localhost:49160
 A test page is available to test all REST endpoints at the root of localhost. Used HTML5, CSS and Vue. Test page can be accessed via the root of localhost (http://localhost:5000)
 
 # Sample Check In POST and Check In Data:
-![image](https://drive.google.com/uc?export=view&id=1sybk0KztzuA6L8hbMJFQUyDB8L14Tkps)
+![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/checkin.png)
 
 # Groups Data View:
-![image](https://drive.google.com/uc?export=view&id=14ip--kmTIMruyA8Aukqp2SmNS_K2Wq55)
+![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/groupview.png)
+
 
 # HTML / Vue Code
 ```html
@@ -563,7 +562,3 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 Here's a project walkthrough video with some of my downtime music production in the background. 
 [![Alt text](https://img.youtube.com/vi/JKNnyH0vFcc/0.jpg)](https://www.youtube.com/watch?v=JKNnyH0vFcc&feature=youtu.be)
 
-
-
-
-![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/checkin.png)
