@@ -14,6 +14,12 @@
 3. node index
 4. navigate to http://localhost:5000
 
+# Optional Dockerization
+1. docker build -t smofo/nyu-homework .
+2. docker run -p 49160:5000 -d smofo/nyu-homework
+3. docker ps
+4. navigate to http://localhost:49160
+
 
 # NYU Coding Challenge
 Part 1: Design question 
