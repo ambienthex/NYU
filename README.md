@@ -239,6 +239,10 @@ Wasn’t specified in the requirement for this coding challenge, but I would nor
 
 Service should have basic error handling.
 
+# Highlevel Data Flow and Component Diagram
+![image](https://drive.google.com/uc?export=view&id=1_BXCm7ywodCemQENdVh0sYPzrFeFoaee)
+
+
 # API Service Code
 ```python
 'use strict';
