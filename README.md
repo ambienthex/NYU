@@ -538,3 +538,11 @@ A test page is available to test all REST endpoints at the root of localhost. Us
   </body>
 
 ```
+
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
