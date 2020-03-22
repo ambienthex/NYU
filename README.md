@@ -22,6 +22,8 @@
 3. docker ps
 4. navigate to http://localhost:49160
 
+# Note
+The event data is a little wonky with people's names for the event names, but that is what was provided in the sample data with the challenge. Was tempted to mock it up with actual event names, but left it intact incase it was needed as is for validation purposes. 
 
 # NYU Coding Challenge
 Part 1: Design question 
