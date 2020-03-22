@@ -1,6 +1,6 @@
 # NYU
 
-# Data initialization
+# Data Initialization
 
 1. Clone project git clone git@github.com:ambienthex/NYU.git
 2. Make sure to have a local instance of MySQL installed and running.
@@ -50,7 +50,7 @@ Number of Attendees
 
 You can use any Http framework of your choice.
 
-# Design answer
+# Design Answer
 
 ## Data Requirements and Considerations
 
