@@ -348,7 +348,22 @@ const output_json = (res, obj) => {
 # Optional Dockerization
 
 docker build -t smofo/nyu-homework .
+
 docker run -p 49160:5000 -d smofo/nyu-homework
+
 docker ps
+
 navigate to http://localhost:49160
+
+# Test HTML / VUE Page
+
+A test page is available to test all REST endpoints at the root of localhost. Used HTML5, CSS and Vue. Test page can be accessed via the root of localhost (http://localhost:5000)
+
+# Sample Check In POST and Check In Data:
+![image](https://drive.google.com/uc?export=view&id=1sybk0KztzuA6L8hbMJFQUyDB8L14Tkps)
+
+# Groups Data View:
+![image](https://drive.google.com/uc?export=view&id=14ip--kmTIMruyA8Aukqp2SmNS_K2Wq55)
+
+
 
