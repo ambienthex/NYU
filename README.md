@@ -12,6 +12,7 @@
 
 # Running API Server
 1. cd api
+2. Update database connection string (host, username, password) at top of index.js as required. 
 2. npm install
 3. node index
 4. navigate to http://localhost:5000
