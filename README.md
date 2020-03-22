@@ -3,9 +3,11 @@
 # Data initialization
 
 1. Clone project git clone git@github.com:ambienthex/NYU.git
-2. cd data-init
-3. pip install mysql
-4. init database and load sample data with "python create_and_prime_database.py".
+2. Make sure to have a local instance of MySQL installed and running.
+3. cd data-init
+4. Modify the database host, connection string at the bottom of "python create_and_prime_database.py" as needed.
+5. pip install mysql
+6. init database and load sample data with "python create_and_prime_database.py".
 
 
 # Running API Server
