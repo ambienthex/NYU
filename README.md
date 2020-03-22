@@ -14,6 +14,8 @@ When a user logs in to the system, the homepage shows a default selected organiz
 
 
 ![image](https://drive.google.com/uc?export=view&id=1OKeWJYPDEORp3EFtMSeozRKaKmCTjiN3)
+OK
+![image](https://drive.google.com/open?id=1OKeWJYPDEORp3EFtMSeozRKaKmCTjiN3)
 
 Part 2: Implementation
 
