@@ -12,7 +12,7 @@ NYU has an attendance tracking system for various events happening around all ca
 
 When a user logs in to the system, the homepage shows a default selected organization, all groups within that organization and metadata for each group. How would you design the REST endpoints for such a page? Each entity mentioned above resides in its own table in a database. Below is an example image for the homepage(for illustration purposes only):
 
-![image](https://drive.google.com/file/d/1OKeWJYPDEORp3EFtMSeozRKaKmCTjiN3/view?usp=sharing)
+![image](https://drive.google.com/uc?export=view&id=1OKeWJYPDEORp3EFtMSeozRKaKmCTjiN3
 
 Part 2: Implementation
 
