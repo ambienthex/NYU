@@ -540,10 +540,15 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 ```
 
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 | End Point | Method | Description | Results |
-| ------------- |------------- |-------------|
+| ------------- |------------- |------------- |-------------|
 | /views/groups | Get | Returns an aggregate JSON data set with groups, events, orgs and checkins tables. |Returns multiple JSON records containing  Group Name, Event Count, Subscription / People in Group Count and number of checkins. |
 | /views/checkins | Get | Get all checkins JSON | Multiple JSON records with student_id, first_name, last_name, even_name, checkin_date field values. |
 | /views/student_group_subscriptions | Get | Returns an aggregate JSON data set with student_group_subscriptions, students and groups tables. | Returns multiple JSON records containing  subscription_id, student_id, group_id, subscribed_date, first_name, last_name, org_id,  and group_name data fields. |
