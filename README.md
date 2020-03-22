@@ -7,7 +7,7 @@
 3. cd data-init
 4. Update the database host name, username and password at the bottom of "python create_and_prime_database.py" on the database connection line as required.
 5. pip install mysql
-6. Initialize database and load sample data with "python create_and_prime_database.py".
+6. Initialize database and load the sample data with "python create_and_prime_database.py". Initialization data is provided in the .json files within the data-init path.
 
 
 # Running API Server
