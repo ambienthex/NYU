@@ -24,3 +24,19 @@ Number of events
 Number of Attendees
 
 You can use any Http framework of your choice.
+
+#Design answer
+
+##Data Requirements and Considerations
+
+1. We’ll start with the data and database design. The first thing that stands out is that there is a field in the provided screenshot that shows the number of people in a group and the supplied sample data (orgs, groups and events) does not provide for that relationship. I’ll add several more tables and data sets to account for this.  We can use a “students” table to hold students and a “student_group_subscription” intermediate table that establishes the many to many relationship between groups and student subscriptions / members to handle that requirement.  
+
+2. The second thing I noticed was that there is a single field in the events table to indicate the number of attendees. This is ok, but it would be best database design wise to include an intermediate table called “checkins” that establishes a many to many between “events” and “students” with a timestamp and the attendee count can be aggregated and allow for a record of the students that attended the event. 
+
+3. Here is my Entity Relationship Diagram that includes the orgs, groups and events data and my three new tables students, student_group_subscriptions and checkins. 
+
+
+Database Entity Relationship Diagram With New Tables
+
+![image](https://drive.google.com/uc?export=view&id=1W0GdfvNuqeHbpMB7k8nYhuzOXCAaUykr)
+
