@@ -1,4 +1,4 @@
-# NYU
+# NYU Tech Screening Project
 
 # Data Initialization
 
