@@ -541,8 +541,20 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+
+| End Point | Method | Description | Results
+| ------------- |------------- |-------------|
+| /views/groups | Get | Returns an aggregate JSON data set with groups, events, orgs and checkins tables. |Returns multiple JSON records containing  Group Name, Event Count, Subscription / People in Group Count and number of checkins. |
+| /views/checkins | Get | Get all checkins JSON | Multiple JSON records with student_id, first_name, last_name, even_name, checkin_date field values. |
+| /views/student_group_subscriptions | Get | Returns an aggregate JSON data set with student_group_subscriptions, students and groups tables. | Returns multiple JSON records containing  subscription_id, student_id, group_id, subscribed_date, first_name, last_name, org_id,  and group_name data fields. |
+| /groups | Get | Returns all group records in a JSON format. | Multiple JSON records containing group_id, org_id, group_name field values. |
+| /orgs | Get | Returns all organization records in a JSON format. | Multiple JSON records containing org_id, org_name field values.|
+| /events | Get | Returns all event records in a JSON format. | Multiple JSON records containing event_id, group_id, even_name, number_of_attendees field values. |
+| /orgs/{key} | Get | Returns a single organization record for the specified organization key. | Returns a single JSON record containing org_id, org_name field values. |
+| /groups/{key} | Get | Returns a single group record for the specified group key. | Returns a single JSON record containing group_id, org_id, group_name field values. |
+| /events/{key} | Get | Returns a single event record for the specified event key. | Returns a single JSON record containing event_id, group_id, even_name, number_of_attendees field values.
+| /students/ | Get | Returns all students | Multiple JSON records containingstudent_id, first_name and last name field values field values. |
+| /events/checkins/:student_id/:event_id | Post | Checks a student into an event. A record is inserted into the checkins table with the provided student_id and event_id. We would normally have authentication here, but just a rough demo of how that works. | Returns 200 on success |
+| /students/{key} | Get | Returns a single event record for the specified event key. | Returns a single JSON record containing event_id, group_id, even_name, number_of_attendees field values. |
+
+
