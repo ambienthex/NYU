@@ -365,5 +365,150 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 # Groups Data View:
 ![image](https://drive.google.com/uc?export=view&id=14ip--kmTIMruyA8Aukqp2SmNS_K2Wq55)
 
+# HTML / Vue Code
+```html
+ <head>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+  </head>
+  <body>
+    <!-- Table CSS-->
+    <style>
+      #datatable {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #datatable td, #datatable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #datatable tr:nth-child(even){background-color: #f2f2f2;}
+      #datatable tr:hover {background-color: #ddd;}
+      #datatable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+      }
+      button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+    </style>
+
+    <!-- Vue App View Port-->
+    <div id="app" style="padding:20px;">
+
+      <!-- Drop down for API GET end points -->
+      <div style="width:500px;">
+        <label for="api">API End Points:</label>
+        <select id="api" @change="clickHandler($event)">
+          <option value="http://localhost:5000/views/groups" selected>http://localhost:5000/views/groups</option>
+          <option value="http://localhost:5000/views/checkins">http://localhost:5000/views/checkins</option>
+          <option value="http://localhost:5000/views/student_group_subscriptions">http://localhost:5000/views/student_group_subscriptions</option>
+          <option value="http://localhost:5000/groups">http://localhost:5000/groups</option>
+          <option value="http://localhost:5000/orgs">http://localhost:5000/orgs</option>
+          <option value="http://localhost:5000/events">http://localhost:5000/events</option>
+          <option value="http://localhost:5000/students">http://localhost:5000/students</option>
+          <option value="http://localhost:5000/students_group_subscriptions">http://localhost:5000/students_group_subscriptions</option>
+        </select>
+      </div>
+
+      <!-- Tabular data rendering -->
+      <table id="datatable">
+        <tr>
+          <th v-for="(value,key) in data[0]">
+            {{key}}
+          </th>
+        </tr>
+        <tr v-for="(record) in data">
+          <td v-for="(value) in record">
+            {{value}}
+          </td>
+        </tr>
+      </table>
+
+      <!-- Checkin Post Demo -->
+      <div style="width:500px;">
+        <label for="students">Check In Demo Student:</label>
+        <select id="students">
+          <option v-for="(record) in students" v-bind:value="record.student_id">
+              {{record.first_name}} {{record.last_name}}
+          </option>
+        </select>
+        <label for="events">Check In Demo Event Name:</label>
+        <select id="events">
+          <option v-for="(record) in events" v-bind:value="record.event_id"> 
+              {{record.even_name}}
+          </option>
+        </select>
+        <div>*Event name data is a little whacky with names, but this is what was provided.</div>
+        <button class="buttton" @click="checkInToEvent()">Check In</button>
+      </div>
+
+      <!-- Bottom Padding -->
+      <div style="height:200px;"></div>
+
+    </div>
 
 
+    <!-- Vue Code -->
+    <script>
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          data: [],
+          students: [],
+          events: []
+        },
+        mounted() {
+          this.getData('http://localhost:5000/views/groups')
+          this.loadStudentAndEventSelects();
+        },
+        methods: {
+          clickHandler(event) {
+            this.data = [];
+            this.getData(event.target.value);
+          },
+          getData: function (url) {
+            axios.get(url)
+            .then(response => {
+                this.data = response.data
+            })
+          },
+          loadStudentAndEventSelects: function() {
+            axios.get('http://localhost:5000/students')
+              .then(response => {
+                  this.students = response.data
+              })
+            axios.get('http://localhost:5000/events')
+              .then(response => {
+                  this.events = response.data
+              })
+          },
+          checkInToEvent: function() {
+            var studentselect = document.getElementById("students");
+            var student_id = studentselect.options[studentselect.selectedIndex].value;
+            var eventselect = document.getElementById("events");
+            var event_id = eventselect.options[eventselect.selectedIndex].value;
+            axios.post('http://localhost:5000/events/checkins/' + student_id + '/' + event_id)
+              .then(response => {
+                alert("You're checked in!");
+              })
+          }
+        }
+      });
+    </script>
+  </body>
+
+```
