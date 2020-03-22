@@ -199,13 +199,11 @@ print('\n\n********* Database initialized ********\n\n\n')
 
 # REST API Service
 
-We’ll use Node.js and Express to build out backend API for the Event API. 
-
-Our API will have HTTP GET controller methods for getting all orgs, all groups and all events. API endpoints will also provided to specify a key to view individual org, group and event records.
+We’ll use Node.js and Express to build out backend API for the Event API. Our API will have HTTP GET controller methods for getting all orgs, all groups and all events. API endpoints will also provided to specify a key to view individual org, group and event records.
 
 We’ll also provide an HTTP GET method for views that will allow us to retrieve aggregates of data across all the tables.  For this project, we’ll just be focusing on the group view / UI that was provided in the project requirements. 
 
-API Definition. We’ll have an express controller method for each of the methods in the table below.
+Normally, I would break API services into modules for controlles, services, models, helpers and entities. Keeping it in a single module for simplicity and ease of code review. 
 
 | End Point | Method | Description | Results |
 | ------------- |------------- |------------- |-------------|
