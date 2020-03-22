@@ -199,11 +199,11 @@ print('\n\n********* Database initialized ********\n\n\n')
 
 # REST API Service
 
-We’ll use Node.js and Express to build out backend API for the Event API. Our API will have HTTP GET controller methods for getting all orgs, all groups and all events. API endpoints will also provided to specify a key to view individual org, group and event records.
+We’ll use Node.js and Express to build out backend API for the Event API. Our API will have HTTP GET and POST controller methods for each of the endpoints defined in the table below. API endpoints will also provided to specify a key to view individual org, group, student and event records.
 
-We’ll also provide an HTTP GET method for views that will allow us to retrieve aggregates of data across all the tables.  For this project, we’ll just be focusing on the group view / UI that was provided in the project requirements. 
+We’ll also provide an HTTP GET method for views that will allow us to retrieve aggregates of data across all the tables.  For this project, we’ll just be focusing on the group view / UI that was provided in the project requirements. A single post method will facilitate checking a student into an event by adding a student id and event id into the checkins intermediate table. 
 
-Normally, I would break API services into modules for controlles, services, models, helpers and entities. Keeping it in a single module for simplicity and ease of code review. 
+Normally, I would break API services into modules for controllers, services, models, helpers and entities. Keeping it in a single module for simplicity and ease of code review. Would also use something like Cloudflare and REDIS for server side caching in a production environment to prevent hitting the database too hard.
 
 | End Point | Method | Description | Results |
 | ------------- |------------- |------------- |-------------|
@@ -225,11 +225,7 @@ Normally, I would break API services into modules for controlles, services, mode
 
 # Design Implementation
 
-Build  a Basic Restful service in Node.JS and express. 
-
-API service needs the ability to connect to MySQL, run queries and return JSON using simple reusable dynamic functions. 
-
-API service needs to provide end points as defined in the table above and to return the appropriate JSON responses in response to endpoints being invoked.
+Build  a Basic Restful service in Node.JS and express. API service needs the ability to connect to MySQL, run queries and return JSON using simple reusable dynamic functions. API service needs to provide end points as defined in the table above and to return the appropriate JSON responses in response to endpoints being invoked.
 
 Wasn’t specified in the requirement for this coding challenge, but I would normally have some authentication. Would also modularize the node.js code a bit as well. Just keeping it simple for this coding challenge. 
 
