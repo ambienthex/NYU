@@ -27,7 +27,7 @@
 The event data is a little wonky with people's names for the event names, but that is what was provided in the sample data with the challenge. Was tempted to mock it up with actual event names, but left it intact incase it was needed as is for validation purposes. 
 
 # NYU Coding Challenge
-Part 1: Design question 
+### Part 1: Design question 
 
 NYU has an attendance tracking system for various events happening around all campuses. Event organizers and attendees can log in to this system. Events are organized into hierarchical categories: 
 
@@ -41,7 +41,7 @@ When a user logs in to the system, the homepage shows a default selected organiz
 
 ![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/nyuscreen.png)
 
-Part 2: Implementation
+### Part 2: Implementation
 
 Implement an API which gives the client information about a particular organization, the groups within that organization, and metadata about each group, for instance, the metadata for each group may include: 
 
