@@ -61,17 +61,17 @@ You can use any Http framework of your choice.
 3. Here is my Entity Relationship Diagram that includes the orgs, groups and events data and my three new tables students, student_group_subscriptions and checkins. 
 
 
-# Database Entity Relationship Diagram With New Tables
+# Database Entity Relationship Diagram with New Tables
 
 ![image](https://raw.githubusercontent.com/ambienthex/NYU/master/document_images/erd.png)
 
-# Creating and priming the Database
+# Creating and Priming the Database
 
 First step is to create a database schema. We’ll use a simple Python script to create the MySQl database. This script should be able to create the database schema. Secondly, the script should create the “orgs”, “groups”, “events”, “student_group_subscriptions”, “students” and “checkins” tables. Lastly, the script should be able to dynamically map and import the fields and data into each of the tables. 
 
 The script is included below and in the data_init directory. If you have an existing test MySQL instance already setup, simply update the MySql credentials at the bottom of the file and run to create the database, tables and prime the database tables with the sample data. Run it via the command line with “python create_and_prime_database.py” in the same path as the supplied JSON files.
 
-# Code to init database and load sample data
+# Code to Initialize Database and Load Sample Data
 
 ```python
 import pymysql
