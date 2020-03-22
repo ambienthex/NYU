@@ -555,5 +555,6 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 
 ```
 
-# Demo video with some of my downtime music production in the background. 
+## Demo video 
+Here's a project walkthrough video with some of my downtime music production in the background. 
 [![Alt text](https://img.youtube.com/vi/JKNnyH0vFcc/0.jpg)](https://www.youtube.com/watch?v=JKNnyH0vFcc&feature=youtu.be)
