@@ -1,5 +1,21 @@
 # NYU
-NYU Coding Challenge
+
+# Data initialization
+
+1. Clone project git clone git@github.com:ambienthex/NYU.git
+2. cd data-init
+3. pip install mysql
+4. init database and load sample data with "python create_and_prime_database.py".
+
+
+# Running API Server
+1. cd api
+2. npm install
+3. node index
+4. navigate to http://localhost:5000
+
+
+# NYU Coding Challenge
 Part 1: Design question 
 
 NYU has an attendance tracking system for various events happening around all campuses. Event organizers and attendees can log in to this system. Events are organized into hierarchical categories: 
