@@ -542,7 +542,7 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 
 
 
-| End Point | Method | Description | Results
+| End Point | Method | Description | Results |
 | ------------- |------------- |-------------|
 | /views/groups | Get | Returns an aggregate JSON data set with groups, events, orgs and checkins tables. |Returns multiple JSON records containing  Group Name, Event Count, Subscription / People in Group Count and number of checkins. |
 | /views/checkins | Get | Get all checkins JSON | Multiple JSON records with student_id, first_name, last_name, even_name, checkin_date field values. |
@@ -555,6 +555,6 @@ A test page is available to test all REST endpoints at the root of localhost. Us
 | /events/{key} | Get | Returns a single event record for the specified event key. | Returns a single JSON record containing event_id, group_id, even_name, number_of_attendees field values.
 | /students/ | Get | Returns all students | Multiple JSON records containingstudent_id, first_name and last name field values field values. |
 | /events/checkins/:student_id/:event_id | Post | Checks a student into an event. A record is inserted into the checkins table with the provided student_id and event_id. We would normally have authentication here, but just a rough demo of how that works. | Returns 200 on success |
-| /students/{key} | Get | Returns a single event record for the specified event key. | Returns a single JSON record containing event_id, group_id, even_name, number_of_attendees field values. |
+| /students/{key} | Get | Returns a single student record for the specified student key. | Returns a single JSON record containing student_id, first_name, last_name field values. |
 
 
