@@ -99,7 +99,7 @@ def load_data(connection, file, table):
       field_vars = '%s,' * len(record.keys())
       field_vars = field_vars[:-1]
       sql = "INSERT INTO " + table + " (" + fields + ") VALUES (" + field_vars + ")"
-      cursor.execute(sql, record.values())
+      cursor.execute(sql, list(record.values()))
       connection.commit()
        # print("key: {} | value: {}".format(key, value))s
 
